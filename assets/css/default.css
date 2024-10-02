@@ -1,0 +1,315 @@
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+/* Override scroll bar css */
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    /* box-shadow: inset 0 0 5px grey;  */
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #f33047;
+    border-radius: 56px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #f33047;
+}
+
+
+/* timeline csss */
+#canvas {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+}
+
+
+.timeline {
+    position: relative;
+    margin: 0 auto;
+}
+
+.timeline:after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    background: #fafaff;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    margin-left: -2px;
+}
+
+.timeline--first:after {
+    top: 20px;
+}
+
+.timeline-title {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 20px;
+}
+
+.timeline-title h2 {
+    background: #ffffff;
+    color: #2575fc;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 7px;
+    font-size: 24px;
+    line-height: 30px;
+}
+
+.timeline-inner {
+    padding: 10px 30px 40px 30px;
+    width: 50%;
+    position: relative;
+    background-color: inherit;
+}
+
+.timeline-right {
+    margin-left: 50%;
+}
+
+.timeline-content {
+    padding: 20px 30px;
+    background: #ffffff;
+    position: relative;
+    border-radius: 7px;
+}
+
+.timeline-content h3 {
+    font-size: 20px;
+    color: #1c1d3e;
+    font-weight: bold;
+}
+
+.timeline-inner::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -16px;
+    margin: auto;
+    height: 32px;
+    width: 32px;
+    border: 3px solid #2575fc;
+    border-bottom: 3px solid transparent !important;
+    border-radius: 50%;
+    z-index: 9;
+    background: #ffffff;
+    -webkit-animation: loader-3-1 1.5s cubic-bezier(0.770, 0.000, 0.175, 1.000) infinite;
+    animation: loader-3-1 1.5s cubic-bezier(0.770, 0.000, 0.175, 1.000) infinite;
+}
+
+.timeline-inner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -3px;
+    margin: auto;
+    width: 6px;
+    height: 6px;
+    background: #005bea;
+    border-radius: 50%;
+    z-index: 9;
+    -webkit-animation: loader-3-2 1.5s cubic-bezier(0.770, 0.000, 0.175, 1.000) infinite;
+    animation: loader-3-2 1.5s cubic-bezier(0.770, 0.000, 0.175, 1.000) infinite;
+}
+
+.timeline-right.timeline-inner::before {
+    right: inherit;
+    left: -16px;
+}
+
+.timeline-right.timeline-inner::after {
+    right: inherit;
+    left: -3px;
+}
+
+.timeline-content:before,
+.timeline-content:after {
+    content: "";
+    background: #f33047 !important;
+    border-radius: 7px;
+    width: 0;
+    height: 3px;
+    position: absolute;
+}
+
+.timeline-content:before {
+    top: 0;
+    left: 0;
+}
+
+.timeline-content:after {
+    bottom: 0;
+    right: 0;
+}
+
+.timeline-inner:hover .timeline-content:before,
+.timeline-inner:hover .timeline-content:after {
+    width: 10%;
+}
+
+.timeline-content:before,
+.timeline-content:after {
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    -ms-transition: all 0.5s ease-in-out 0s;
+    -o-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.box-shadow,
+#header-wrap.fixed-header,
+.navbar-nav ul,
+.header-1 #header-wrap:before,
+.header-1 #header-wrap:after,
+.btn,
+.icon-btn,
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next,
+#mc-form input[type="email"],
+.timeline-content,
+.timeline-title h2,
+.contact-media,
+.accordion .accordion-button,
+.counter,
+.img-box,
+.tab.style-2,
+.price-table,
+.testimonial.style-1 .testimonial-content,
+.testimonial.style-4 .testimonial-img,
+.testimonial.style-5 .testimonial-content,
+.team-member.style-1,
+.team-link,
+.team-member.style-2 .team-description,
+.team-member.style-3,
+.testimonial.style-2 .testimonial-content,
+.testimonial.style-2 .testimonial-content:before,
+.testimonial.style-2 .testimonial-content:after,
+.testimonial.style-3 .testimonial-img,
+.team-member.style-4 .team-description,
+.team-description .team-icon li i,
+.featured-item,
+.featured-item:hover,
+.featured-item.style-1 .featured-icon i,
+.featured-item.style-2,
+.featured-item.style-6 .featured-icon i,
+.post,
+.post.style-3 .post-image,
+.post.style-3:hover,
+.post.style-4 .post-desc,
+.widget-title,
+.comment-reply a,
+.clients-logo {
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(72, 73, 121, 0.15);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(72, 73, 121, 0.15);
+    box-shadow: 0px 0px 15px 0px rgba(72, 73, 121, 0.15);
+}
+
+.timeline-inner::before {
+    border-color: #481ea7;
+}
+
+.timeline-title h2 {
+    color: #481ea7;
+}
+
+.timeline-inner::after {
+    background-color: #f44d85;
+}
+
+.timeline-content::before,
+.timeline-content::after {
+    background-color: #481ea7;
+}
+
+
+@media (max-width: 767px) {
+
+    /*Timeline*/
+    .timeline-title {
+        text-align: left;
+    }
+
+    .timeline::after {
+        left: 0;
+        margin-left: 0;
+    }
+
+    .timeline-inner {
+        width: 100%
+    }
+
+    .timeline-right {
+        margin-left: 0;
+    }
+
+    .timeline-inner::before {
+        right: inherit;
+        left: -16px;
+    }
+}
+
+
+.nav-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px dashed #f4d3de;
+}
+
+.nav-item {
+    gap: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.nav-item:hover {
+    border-bottom: 2px solid #f44d85;
+    transition: border-bottom 0.5s linear 0s;
+}
+
+.npm-color {
+    color: #c53735;
+}
+
+.portfolio-what-do-item img {
+    border-radius: 2px;
+    max-width: 40px;
+    max-height: 60px;
+}
+
+
+.toast-success {
+    background-color: #d1e7dd;
+    border: 1px solid #badbcc;
+    border-radius: 6px;
+}
+
+.toast-success .toast-body {
+    color: #0f5132;
+}
+
+.toast-success .btn-close {
+    color: #0f5132;
+    /* background-color: #0f5132; */
+}
