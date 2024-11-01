@@ -219,6 +219,14 @@ document.getElementById('downloadCv').addEventListener('click', function () {
   link.download = 'Rakesh Kumawat cv.pdf';
   link.click();
 });
+document.getElementById('downloadCv1').addEventListener('click', function () {
+  let link = document.createElement('a');
+
+  link.href = './assets/cv.pdf';
+ 
+  link.download = 'Rakesh Kumawat cv.pdf';
+  link.click();
+});
 
 // Copy to clip mobile
 document.getElementById('copyBtn').addEventListener('click', function() {
